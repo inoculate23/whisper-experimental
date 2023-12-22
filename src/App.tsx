@@ -6,9 +6,7 @@ console.log(logo);
 
 function App() {
     const transcriber = useTranscriber();
-let speaker_embeddings = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/speaker_embeddings.bin';
-let synthesizer = await pipeline('text-to-speech', 'Xenova/speecht5_tts', { quantized: false });
-let out = await synthesizer({ transcribedData }, { speaker_embeddings });
+
     return (
    
         <div className='flex justify-center items-center min-h-screen'>
@@ -24,6 +22,9 @@ let out = await synthesizer({ transcribedData }, { speaker_embeddings });
                 </h2>
                 <AudioManager transcriber={transcriber} />
                 <Transcript transcribedData={transcriber.output} />
+                let speaker_embeddings = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/speaker_embeddings.bin';
+let synthesizer = pipeline('text-to-speech', 'Xenova/speecht5_tts', { quantized: false });
+let out = synthesizer({ transcribedData }, { speaker_embeddings });
                     <a
                     className='underline'
                     href='mailto:info@inoculate.media'
