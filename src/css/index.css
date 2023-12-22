@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+    height: 100%;
+      background-image: url('/tiles.png');
+ background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: white;
+}
+
+.container {
+    height: 95%;
+    width: 51rem /* 656px */;
+    max-width: 155vw;
+      background-color: white;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.language-container {
+  display: flex;
+  gap: 20px;
+}
+
+#logo {
+  position:relative;
+  margin-left:40%;
+  margin-right:40%;
+  margin-bottom: 30%;
+}
+  
+
+
