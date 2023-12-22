@@ -8,7 +8,7 @@ function App() {
     const transcriber = useTranscriber();
 let speaker_embeddings = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/speaker_embeddings.bin';
 let synthesizer = await pipeline('text-to-speech', 'Xenova/speecht5_tts', { quantized: false });
-let out = await synthesizer({transcriber.output}, { speaker_embeddings });
+let out = await synthesizer({ transcribedData }, { speaker_embeddings });
     return (
    
         <div className='flex justify-center items-center min-h-screen'>
